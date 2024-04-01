@@ -3,8 +3,7 @@ import './index.css';
 import OmbudsmanOptions from './Ombudsman'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCommentDots, faUser, faFlag } from '@fortawesome/free-solid-svg-icons';
-
-
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 function Menu() {
     const [searchText, setSearchText] = useState('');
@@ -113,19 +112,19 @@ function Submenu() {
             <div className="logo-container">
                 <img src={`${process.env.PUBLIC_URL}/unifacisa-2.jpg`} alt="Logo" className="logo" />
             </div>
-            <div className="submenu-container">
+                <div className="submenu-container">
                 <div className="submenu-items">
                     {submenuItems.map((item, index) => (
                         <div key={index} className="submenu-item">
                             <div onClick={() => handleToggleOptions(index)} className="submenu-item-label">
                                 {item.label}
-                                <span className="arrow">{showOptions === index ? '▲' : '▼'}</span>
-                            </div>
-                            {showOptions === index && (
-                                <ul className="submenu-options">
-                                    {item.options.map((option, i) => (
-                                        <li key={i}>{option}</li>
-                                    ))}
+                        <span className="arrow">{showOptions === index ? '▲' : '▼'}</span>
+                </div>
+                    {showOptions === index && (
+                        <ul className="submenu-options list-group">
+                            {item.options.map((option, i) => (
+                                <li key={i} className="list-group-item">{option}</li>
+                                ))}
                                 </ul>
                             )}
                         </div>
