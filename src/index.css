@@ -205,11 +205,12 @@ h1 {
   background-color: #F2F2F2;
   border: 1px solid #e9ecef;
   border-radius: 15px;
-  padding: 5px;
+  padding: 25px;
   margin-top: -60px;
   box-shadow: 0 2px 4px rgb(161, 160, 160); 
   width: 85%;
   margin-left: 100px;
+  margin-bottom: 20px;
  
 }
 form {
@@ -225,7 +226,7 @@ form label {
 }
 
 form input {
-  width:94%;
+  width:90%;
   grid-column: 1 / span 2;
   padding: 5px;
   margin-bottom: 10px;
@@ -263,10 +264,11 @@ form p {
   line-height: 1.5;
   color: #000;
   margin-left: 104px;
+  margin-bottom: -10px;
 }
 
 .intro p {
-  margin-bottom: 10px;
+  margin-bottom: 5px;
 }
 
 .intro a {
