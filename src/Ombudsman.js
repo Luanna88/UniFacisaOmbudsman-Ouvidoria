@@ -241,11 +241,6 @@ function OmbudsmanOptions() {
             <div className='card-2' >
                 <footer  >
                     <p>Apply Reading and Oral Communication Techniques in English</p>
-                    <p>Equipe: ARTHUR TRINDADE CORDEIRO LUCENA,
-                               GIL GILBERTO DE SOUZA RODRIGUES,
-                               LUANNA FERNANDES DE SOUZA,
-                               MICAEL RADSON DE ARAUJO E SILVA.
-                    </p>
                 </footer>
             </div>
         </div>
