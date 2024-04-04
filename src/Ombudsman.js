@@ -8,6 +8,7 @@ import { faFolder } from '@fortawesome/free-solid-svg-icons';
 
 function OmbudsmanOptions() {
     const [fullName, setFullName] = useState('');
+    const [email, setEmail] = useState('');
     const [occupation, setOccupation] = useState('');
     const [telephone, setTelephone] = useState('');
     const [type, setType] = useState('');
@@ -20,7 +21,7 @@ function OmbudsmanOptions() {
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        if (!fullName || !occupation || !telephone || !type || !character || !subject || !reportOfFact) {
+        if (!fullName || !email || !occupation || !telephone || !type || !character || !subject || !reportOfFact) {
             setMessage('Please fill in all fields.');
             setTimeout(() => {
                 setMessage('');
@@ -37,6 +38,7 @@ function OmbudsmanOptions() {
         setMessage('Message sent successfully!');
         setFormSubmitted(true);
         setFullName('');
+        setEmail('');
         setOccupation('');
         setTelephone('');
         setType('');
@@ -69,6 +71,13 @@ function OmbudsmanOptions() {
                     onChange={(e) => setFullName(e.target.value)}
                     placeholder="Enter your full name"
 
+                />
+                <label>Email:</label>
+                <input
+                    type="email"
+                    value={email}
+                    onChange={(e) => setEmail(e.target.value)}
+                    placeholder="Enter your email"
                 />
 
                 <label>Occupation:</label>
@@ -211,7 +220,7 @@ function OmbudsmanOptions() {
                 </form>
             </div>
             <div className='card-5'>
-                <h1><FontAwesomeIcon icon={faPhoneVolume} style={{ marginRight: '10px', marginLeft: '-10px', marginBottom: '-10px' }} size="2x" />Ligar</h1>
+                <h1><FontAwesomeIcon icon={faPhoneVolume} style={{ marginRight: '10px', marginLeft: '-10px', marginBottom: '-10px' }} size="2x" />Call</h1>
                 <h2>83 2101 8877</h2>
                 <form>
                     <div className='button'>
@@ -249,3 +258,4 @@ function OmbudsmanOptions() {
 }
 
 export default OmbudsmanOptions;
+
